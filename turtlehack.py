@@ -37,9 +37,6 @@ def random_location(turtle, x, y):
 	rand_y = -y + random.randint(0,2*y)
 	turtle.setpos(rand_x, rand_y)
 
-#def random_location(turtle, x, y):
-	# TODO: write this function 
-
 
 # A function that draws an n-sided polygon
 def n_sided_polygon(turtle, n, color="#FFFFFF", line_thickness=1, line_length=80):
