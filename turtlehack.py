@@ -39,6 +39,7 @@ def random_location(turtle, x, y):
 
 
 # A function that draws an n-sided polygon
+
 def n_sided_polygon(turtle, n, color="#FFFFFF", line_thickness=1, line_length=80):
 	'''
 	Draw an n-sided polygon
