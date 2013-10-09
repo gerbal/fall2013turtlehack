@@ -27,5 +27,11 @@ def random_color():
 	return "#" +color_value
 
 # A function that takes a turtle and a pair of numbers and sets the turtle to a random location from x to -x and y to -y
-#def random_location(turtle, x, y):
-	# TODO: write this function 
+def random_location(turtle, x, y):
+	'''
+	Moves turtle to random location within bounds (-x,-y) and (x,y)
+	takes arguments turtle, x, and y
+	'''
+	rand_x = -x + random.randint(0,2*x)
+	rand_y = -y + random.randint(0,2*y)
+	turtle.setpos(rand_x, rand_y)
