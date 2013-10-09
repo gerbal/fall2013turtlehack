@@ -27,6 +27,7 @@ def random_color():
 	return "#" +color_value
 
 # A function that takes a turtle and a pair of numbers and sets the turtle to a random location from x to -x and y to -y
+
 def random_location(turtle, x, y):
 	'''
 	Moves turtle to random location within bounds (-x,-y) and (x,y)
@@ -35,3 +36,37 @@ def random_location(turtle, x, y):
 	rand_x = -x + random.randint(0,2*x)
 	rand_y = -y + random.randint(0,2*y)
 	turtle.setpos(rand_x, rand_y)
+
+#def random_location(turtle, x, y):
+	# TODO: write this function 
+
+
+# A function that draws an n-sided polygon
+def n_sided_polygon(turtle, n, color="#FFFFFF", line_thickness=1, line_length=80):
+	'''
+	Draw an n-sided polygon
+	input: turtle, number of sides, line color, line thickness, line length
+	'''
+	# for n times:
+	# Draw a line, then turn 360/n degrees and draw another
+
+	# set initial parameters
+  	turtle.degrees()
+  	turtle.pensize(line_thickness)
+  	turn_angle = (360/n)
+
+	# Draw each line segment and turn
+
+  	for i in range(0,n):
+	  turtle.color(color)
+    	  turtle.pendown()
+    	  turtle.forward(line_length)
+   	  turtle.penup()
+    	  turtle.left(turn_angle)
+
+	# return the turtle to its original starting location
+	turtle.left(turn_angle)
+
+	return 0
+
+

@@ -79,15 +79,24 @@ except:
 
 reset(test_turtle)
 
-# random_location() test
+# n_sided_polygon() test
 move(test_turtle,100,0)
+try:
+  print_testing("n_sided_polygon()")
+  turtlehack.n_sided_polygon(test_turtle, 8, "#99badd", 4, 15)
+except:
+  print "-- problem with n sided polygon()"
+
+reset(test_turtle)
+
+# random_location() test
+move(test_turtle,220,0)
 try:
   print_testing("random_location()")
   test_turtle.color('purple')
   turtlehack.random_location(test_turtle, 50, 50)
 except:  
   draw_error("random_location()")
-
 
 ####################
 print "End of tests"
